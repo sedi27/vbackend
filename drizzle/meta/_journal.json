@@ -1,0 +1,146 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1743661988465,
+      "tag": "0000_huge_daimon_hellstrom",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1743662136700,
+      "tag": "0001_tiny_hellcat",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1743762577119,
+      "tag": "0002_unknown_leopardon",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1743762669064,
+      "tag": "0003_fixed_overlord",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1743762760546,
+      "tag": "0004_wet_sentinels",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1744002097873,
+      "tag": "0005_green_nightshade",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1744023055025,
+      "tag": "0006_sturdy_major_mapleleaf",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1744023307953,
+      "tag": "0007_far_screwball",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1744090536448,
+      "tag": "0008_lively_speed",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1744091315916,
+      "tag": "0009_sudden_butterfly",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1744091588698,
+      "tag": "0010_cynical_tyger_tiger",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1744091868157,
+      "tag": "0011_complex_havok",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1744092248452,
+      "tag": "0012_special_korg",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1744179106497,
+      "tag": "0013_faithful_talon",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1744179197181,
+      "tag": "0014_spooky_virginia_dare",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1744180345285,
+      "tag": "0015_lovely_monster_badoon",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "5",
+      "when": 1744180442359,
+      "tag": "0016_complete_the_stranger",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "5",
+      "when": 1744180529236,
+      "tag": "0017_safe_leech",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "5",
+      "when": 1744180592748,
+      "tag": "0018_bouncy_glorian",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "5",
+      "when": 1744195694759,
+      "tag": "0019_ambiguous_pretty_boy",
+      "breakpoints": true
+    }
+  ]
+}

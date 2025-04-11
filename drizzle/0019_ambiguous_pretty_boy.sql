@@ -1,0 +1,1 @@
+ALTER TABLE `leaves` DROP INDEX `leave_user_id_unique`;

@@ -1,0 +1,50 @@
+CREATE TABLE `users` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`company_id` int NOT NULL,
+	`username` varchar(100) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
+	`status` varchar(20) NOT NULL DEFAULT '''active''',
+	`role` enum('admin','user','superadmin') NOT NULL DEFAULT 'user',
+	`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	CONSTRAINT `users_email_unique` UNIQUE(`email`)
+);
+--> statement-breakpoint
+CREATE TABLE `employees` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`company_id` int NOT NULL,
+	`user_id` int NOT NULL,
+	`employee_id` varchar(100) NOT NULL,
+	`country` varchar(100) NOT NULL,
+	`state` varchar(100) NOT NULL,
+	`city` varchar(100) NOT NULL,
+	`address` varchar(255) NOT NULL,
+	`monthly_salary` double NOT NULL,
+	`slack_username` varchar(100) NOT NULL,
+	`department_id` int NOT NULL,
+	`designation_id` int NOT NULL,
+	`joining_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`last_date` date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`added_by` int NOT NULL,
+	`last_updated_by` int NOT NULL,
+	`attendance_reminder` date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`date_of_birth` date NOT NULL,
+	`calendar_view` varchar(100) NOT NULL,
+	`about_me` varchar(255) NOT NULL,
+	`reporting_to` int NOT NULL,
+	`contract_end_date` date NOT NULL,
+	`internship_start_date` date NOT NULL,
+	`internship_end_date` date NOT NULL,
+	`employment_type` varchar(100) NOT NULL,
+	`marriage_anniversary_date` date NOT NULL,
+	`marital_status` varchar(100) NOT NULL,
+	`notice_period_end_date` date NOT NULL,
+	`notice_period_start_date` date NOT NULL,
+	`probation_end_date` date NOT NULL,
+	`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	CONSTRAINT `employees_user_id_unique` UNIQUE(`user_id`)
+);
+--> statement-breakpoint
+CREATE INDEX `users_company_id_companies_id_fk` ON `users` (`company_id`);

@@ -1,0 +1,1 @@
+ALTER TABLE `employees` MODIFY COLUMN `company_id` varchar(255);

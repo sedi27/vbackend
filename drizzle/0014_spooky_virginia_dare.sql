@@ -1,0 +1,1 @@
+ALTER TABLE `leaves` ADD PRIMARY KEY(`id`);
