@@ -1,6 +1,6 @@
-import { attendances } from '../model/attendanceModel';
+import { attendances } from '../model';
 import { Request, Response } from 'express';
-import { eq } from 'drizzle-orm';
+import { eq,sql } from 'drizzle-orm';
 import { db } from '../services/databaseService';
 
 interface Attendence {
@@ -66,6 +66,27 @@ export async function getAttendenceById(req: Request, res: Response){
         res.status(500).json({message: 'Error fetching Attendence', error});
     }
 }
+
+
+export async function getAttendancesByMonth(req: Request, res: Response) {
+    // Default to March 2025 if no query params are passed
+    const month = parseInt(req.query.month as string) || 3; // Default to March
+    const year = parseInt(req.query.year as string) || 2025; // Default to 2025
+
+    try {
+        const attendancesForMonth = await db
+            .select()
+            .from(attendances)
+            .where(
+                sql`MONTH(${attendances.clock_in_time}) = ${month} AND YEAR(${attendances.clock_in_time}) = ${year}`
+            );
+
+        res.status(200).json(attendancesForMonth);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching attendances for month', error });
+    }
+}
+
 
 export async function deleteAttendence(req: Request, res: Response){
     const attendenceId = parseInt(req.params.id);

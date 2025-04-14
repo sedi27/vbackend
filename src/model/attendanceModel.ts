@@ -3,7 +3,7 @@ import { int, mysqlEnum, mysqlTable, timestamp, unique, varchar } from 'drizzle-
 
 
 export const attendances = mysqlTable('attendances', {
-	id: int().autoincrement().notNull(),
+	id: int().autoincrement().notNull().primaryKey(),
 	company_id: int('company_id').notNull(),
 	user_id: int('user_id').notNull(),
 	location_id: varchar({ length: 255 }).notNull(),
