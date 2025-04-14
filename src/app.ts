@@ -5,6 +5,7 @@ import user from './router/userRouter'
 import login from './router/loginRouter'
 import register from './router/userEmployeeRouter'
 import leaveRegister from './router/leaveRouter'
+import attendanceRegister from './router/attendanceRouter'
 import globalErrorHandler from './middlewares/globalErrorHandler'
 import responseMessage from './constants/responseMessage'
 import httpError from './util/httpError'
@@ -34,6 +35,7 @@ app.use('/api/v1/user', user)
 app.use('/api/v1/auth', login)
 app.use('/api/v1/register', register)
 app.use('/api/v1/leave', leaveRegister)
+app.use('/api/v1/attendance', attendanceRegister)
 
 // Global Error Handler
 app.use(globalErrorHandler)
