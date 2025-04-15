@@ -1,0 +1,1 @@
+ALTER TABLE `attendances` DROP PRIMARY KEY;

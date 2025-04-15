@@ -1,9 +1,9 @@
 import { sql } from 'drizzle-orm';
-import { int, mysqlEnum, mysqlTable, timestamp, unique, varchar } from 'drizzle-orm/mysql-core';
+import { int, mysqlEnum, mysqlTable, timestamp, varchar } from 'drizzle-orm/mysql-core';
 
 
 export const attendances = mysqlTable('attendances', {
-	id: int().autoincrement().notNull().primaryKey(),
+	id: int().autoincrement().notNull(),
 	company_id: int('company_id').notNull(),
 	user_id: int('user_id').notNull(),
 	location_id: varchar({ length: 255 }).notNull(),
@@ -30,8 +30,4 @@ export const attendances = mysqlTable('attendances', {
 	break_in_time: timestamp('break_in_time', { mode: 'string' }).notNull(),
 	break_out_ip: varchar({ length: 255 }).notNull(),
 	break_out_time: timestamp('break_out_time', { mode: 'string' }).notNull(),
-},
-(table) => [
-	unique('attendances_company_id_unique').on(table.company_id),
-	unique('attendances_user_id_unique').on(table.user_id),
-]);
+});
